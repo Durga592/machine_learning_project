@@ -5,3 +5,19 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
+
+[project.optional-dependencies]
+machine-learning-project = [
+    "machine-learning-project",
+    "numpy>=2.2.6",
+    "pandas>=2.3.2",
+    "seaborn>=0.13.2",
+]
+
+[tool.uv.workspace]
+members = [
+    ".",
+]
+
+[tool.uv.sources]
+machine-learning-project = { workspace = true }
